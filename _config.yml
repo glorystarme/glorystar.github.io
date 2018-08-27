@@ -81,3 +81,5 @@ deploy:
   type: git
   repository: git@github.com:glorystarme/glorystarme.github.io.git
   branch: master
+  
+disqus_shortname: glorystarme
