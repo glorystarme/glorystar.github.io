@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="y1s,智能翻墙,breed,newifi y1s,padavan,y1s 刷机,y1s刷breed,y1s刷固件,刷breed,外贸路由器,小白教程,手把手教程,打造自己的外贸路由器,智能翻墙路由器,智能翻墙路由器打造,科学上网,老毛子固件,路由器,路由器科学上网,路由器翻墙," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="接上文 电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程 你会否觉得配置好自己的专属Shadowsocks服务器后，每新增一台设备都要配置一番很麻烦。 如果你是外贸办公室使用，每一台电脑都要装SS客户端，调试一阵，是否很费时间而且客户端分散化也给维护带来困难？ 这种情况下，你需要一台能运行SS提供智能翻墙服务的路由器！ 下面开始教程： 购买一台智能路由器联想 newifi 新路由1">
+<meta name="keywords" content="y1s,智能翻墙,breed,newifi y1s,padavan,y1s 刷机,y1s刷breed,y1s刷固件,刷breed,外贸路由器,小白教程,手把手教程,打造自己的外贸路由器,智能翻墙路由器,智能翻墙路由器打造,科学上网,老毛子固件,路由器,路由器科学上网,路由器翻墙">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在路由器上配置SS！手把手打造自己的外贸路由器、智能翻墙路由器，Newifi Y1s刷Padavan固件手把手教程">
+<meta property="og:url" content="http://yoursite.com/2017/07/31/how-to-make-a-autoproxy-router/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="接上文 电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程 你会否觉得配置好自己的专属Shadowsocks服务器后，每新增一台设备都要配置一番很麻烦。 如果你是外贸办公室使用，每一台电脑都要装SS客户端，调试一阵，是否很费时间而且客户端分散化也给维护带来困难？ 这种情况下，你需要一台能运行SS提供智能翻墙服务的路由器！ 下面开始教程： 购买一台智能路由器联想 newifi 新路由1">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3558509201.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2235863257.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3281416942.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/4103708983.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/1827459283.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/1237742825.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3716942712.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/4143276729.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3655656577.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2196300889.gif">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/1836490056.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2052237409.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2389258175.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/4061346156.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/754894337.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/1544060873.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3705814267.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/475919169.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3796457405.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/4284233539.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3460802772.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2391785601.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/1561236387.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2000844612.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2133380750.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2045308008.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/4101841730.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/261919983.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2135613016.png">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在路由器上配置SS！手把手打造自己的外贸路由器、智能翻墙路由器，Newifi Y1s刷Padavan固件手把手教程">
+<meta name="twitter:description" content="接上文 电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程 你会否觉得配置好自己的专属Shadowsocks服务器后，每新增一台设备都要配置一番很麻烦。 如果你是外贸办公室使用，每一台电脑都要装SS客户端，调试一阵，是否很费时间而且客户端分散化也给维护带来困难？ 这种情况下，你需要一台能运行SS提供智能翻墙服务的路由器！ 下面开始教程： 购买一台智能路由器联想 newifi 新路由1">
+<meta name="twitter:image" content="https://dva6.com/usr/uploads/2017/08/3558509201.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/31/how-to-make-a-autoproxy-router/"/>
+
+
+
+
+
+  <title>在路由器上配置SS！手把手打造自己的外贸路由器、智能翻墙路由器，Newifi Y1s刷Padavan固件手把手教程 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/31/how-to-make-a-autoproxy-router/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">在路由器上配置SS！手把手打造自己的外贸路由器、智能翻墙路由器，Newifi Y1s刷Padavan固件手把手教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-31T18:18:00+08:00">
+                2017-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/31/how-to-make-a-autoproxy-router/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/31/how-to-make-a-autoproxy-router/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>接上文 <strong><a href="https://dva6.com/archives/use-bwg-through-the-GFW.html" target="_blank" rel="noopener">电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程</a></strong> 你会否觉得配置好自己的专属Shadowsocks服务器后，每新增一台设备都要配置一番很麻烦。 如果你是外贸办公室使用，每一台电脑都要装SS客户端，调试一阵，是否很费时间而且客户端分散化也给维护带来困难？ 这种情况下，你需要一台能运行SS提供智能翻墙服务的路由器！ 下面开始教程：</p>
+<h3 id="购买一台智能路由器"><a href="#购买一台智能路由器" class="headerlink" title="购买一台智能路由器"></a>购买一台智能路由器</h3><p><a href="https://item.jd.com/2798485.html" target="_blank" rel="noopener">联想 newifi 新路由1 1200Mbps智能无线路由器 三USB口 千兆LAN口 11AC双频 京东链接</a>，查了其历史价格，最低到过<strong>99元</strong>，现在<strong>199元</strong>的价格很坑爹！京东的服务不值这接近一半的差价！ <a href="https://s.taobao.com/search?q=%E8%81%94%E6%83%B3+Y1S" target="_blank" rel="noopener">联想newifi新路由 Y1S 淘宝链接</a>。在这选一家购买吧，省一点。 本来想推荐我在用的Newifi Mini的，可惜那个下市了。 Newifi Mini用下来印象不错，所以还推荐买它家的机型。 Y1S相比Newifi mini会更强点， 它默认是百兆wan 2x千兆lan 2x百兆lan，刷完固件后我们能把它变成千兆wan x1，千兆lan x1 百兆lan x3，更适合一点。</p>
+<h3 id="刷老毛子Padavan固件"><a href="#刷老毛子Padavan固件" class="headerlink" title="刷老毛子Padavan固件"></a>刷老毛子Padavan固件</h3><p>手头上没有联想Y1S路由器，硬套之后刷Newifi mini的经验怕出现不可预测的问题，待我有空买个新路由1来实际操作一番再来完善这个教程。 当然，如果你想赞助我一台路由以便我完成此教程我也是无任欢迎的^_^ 博主已自掏腰包购买~ 已买了路由器了，已到货，开箱见 <a href="https://dva6.com/archives/buy-a-Newifi-Y1s-router.html" target="_blank" rel="noopener">买的新路由 Newifi Y1s到了，开箱苞照！</a></p>
+<h3 id="开始教程"><a href="#开始教程" class="headerlink" title="开始教程"></a>开始教程</h3><p>先连接Y1S的wan口到已有路由的lan口 <img src="https://dva6.com/usr/uploads/2017/08/3558509201.jpg" alt="Padavan1.jpg"> <img src="https://dva6.com/usr/uploads/2017/08/2235863257.jpg" alt="Padavan2.jpg"> 再用一台电脑连接到Y1s的lan口，这里连接的是Lan1，随意哪个都可 <img src="https://dva6.com/usr/uploads/2017/08/3281416942.jpg" alt="Padavan3.jpg"> <img src="https://dva6.com/usr/uploads/2017/08/4103708983.jpg" alt="Padavan4.jpg"> 连接好之后，路由器通电 <img src="https://dva6.com/usr/uploads/2017/08/1827459283.jpg" alt="Padavan5.jpg"> 指示灯如图所示表示已正常启动，打开浏览器访问管理后台 <a href="http://192.168.99.1" target="_blank" rel="noopener">http://192.168.99.1</a> 默认密码为 <code>admin</code> <img src="https://dva6.com/usr/uploads/2017/08/1237742825.png" alt="r1.png"></p>
+<h3 id="进路由器后台看看，各项功能是否正常"><a href="#进路由器后台看看，各项功能是否正常" class="headerlink" title="进路由器后台看看，各项功能是否正常"></a>进路由器后台看看，各项功能是否正常</h3><p>如你的上级路由器是DHCP分配IP的，现在Y1S已自动配置好网络，你能正常上网。 如你直接用此路由连接光猫，你还得进行拨号操作才能正常上网，如下图所示 <img src="https://dva6.com/usr/uploads/2017/08/3716942712.png" alt="r2.png"> <img src="https://dva6.com/usr/uploads/2017/08/4143276729.png" alt="r3.png"></p>
+<h3 id="正常上网之后，下载下列刷机的文件备用"><a href="#正常上网之后，下载下列刷机的文件备用" class="headerlink" title="正常上网之后，下载下列刷机的文件备用"></a>正常上网之后，下载下列刷机的文件备用</h3><p>恩山的hackpascal大佬的 Breed Bootloader 下载链接: breed-mt7620-lenovo-y1s.bin 有了这个我们才能刷强大的Padavan固件。 本站备用下载链接： <a href="https://downloads.glorystar.me/breed-mt7620-lenovo-y1s.bin" target="_blank" rel="noopener">breed-mt7620-lenovo-y1s.bin</a> 恩山的hiboyhiboyhiboy大佬的Padavan固件 下载地址： <a href="https://eyun.baidu.com/s/3kV0JV19" target="_blank" rel="noopener">https://eyun.baidu.com/s/3kV0JV19</a> (选择最近日期的版本下载 Y1s的固件名称为 <code>RT-AC1200HP_GPIO_11_Y1S_256M</code>) 本站备用下载链接： <a href="https://downloads.glorystar.me/RT-AC1200HP-GPIO-11-Y1S-256MS_3.4.3.9-099_%E6%8E%A5%E5%8F%A3%E5%8F%8D%E8%BD%AC%E5%8D%83%E5%85%86WANLAN.trx" target="_blank" rel="noopener">RT-AC1200HP-GPIO-11-Y1S-256MS_3.4.3.9-099_接口反转千兆WANLAN.trx</a> <strong>下载完之后开始正式刷机</strong></p>
+<h3 id="1-路由器进恢复模式"><a href="#1-路由器进恢复模式" class="headerlink" title="1. 路由器进恢复模式"></a>1. 路由器进恢复模式</h3><p>把路由器断电，按住电源口旁边的RST按钮，再接通电源，等五秒松开RST按钮，这时你会看到WIFI灯和USB灯双闪，表示路由器已成功进入恢复模式</p>
+<h3 id="2-设置电脑本地IP"><a href="#2-设置电脑本地IP" class="headerlink" title="2. 设置电脑本地IP"></a>2. 设置电脑本地IP</h3><p><strong>注意恢复模式千兆LAN口（蓝色的）不可用</strong>，之前我们是把电脑连接到千兆口的，现在把它连接到百兆LAN口（黑色），如下图 <img src="https://dva6.com/usr/uploads/2017/08/3655656577.jpg" alt="Padavan6.jpg"> 打开电脑的 控制面板–网络和internet–网络和共享中心–更改适配器–找到本地连接端口–双击它–点属性–双击Internet协议版本4–把电脑的IP设置为固定IP 如下图所示 <img src="https://dva6.com/usr/uploads/2017/08/2196300889.gif" alt="Setup Static IP"> 设置为如图所示的IP，之后一路确定退出。 <img src="https://dva6.com/usr/uploads/2017/08/1836490056.png" alt="r11.png"></p>
+<h3 id="3-进入恢复后台刷入-Breed"><a href="#3-进入恢复后台刷入-Breed" class="headerlink" title="3. 进入恢复后台刷入 Breed"></a>3. 进入恢复后台刷入 Breed</h3><p>浏览器进入 <code>192.168.1.1</code> 显示如下 <img src="https://dva6.com/usr/uploads/2017/08/2052237409.png" alt="r12.png"> 找到之前下载备用的 <code>breed-mt7620-lenovo-y1s.bin</code> 选中它 <img src="https://dva6.com/usr/uploads/2017/08/2389258175.png" alt="r13.png"> 按恢复开始刷入 Breed <img src="https://dva6.com/usr/uploads/2017/08/4061346156.png" alt="r14.png"> 提示刷入成功后自动重启，等其重启完成 刷入 Breed 成功！</p>
+<h3 id="4-进入Breed刷入-Padavan固件"><a href="#4-进入Breed刷入-Padavan固件" class="headerlink" title="4. 进入Breed刷入 Padavan固件"></a>4. 进入Breed刷入 Padavan固件</h3><p>再次拨掉电源，按住RST按钮，通电，约8秒后松开RST按钮，你还会看到指示灯双闪，表示已成功进入Breed 再次进入 <code>192.168.1.1</code> 会看到Breed的界面。 <img src="https://dva6.com/usr/uploads/2017/08/754894337.png" alt="r15.png"> 开始刷机 选择之前下载的 <code>RT-AC1200HP-GPIO-11-Y1S-256MS_3.4.3.9-099_接口反转千兆WANLAN.trx</code> <img src="https://dva6.com/usr/uploads/2017/08/1544060873.png" alt="r16.png"> <img src="https://dva6.com/usr/uploads/2017/08/3705814267.png" alt="r17.png"> <img src="https://dva6.com/usr/uploads/2017/08/475919169.png" alt="r18.png"> <img src="https://dva6.com/usr/uploads/2017/08/3796457405.png" alt="r19.png"> 开始更新 <img src="https://dva6.com/usr/uploads/2017/08/4284233539.png" alt="r20.png"> 成功刷入 <img src="https://dva6.com/usr/uploads/2017/08/3460802772.png" alt="r21.png"></p>
+<h3 id="5-把刚才设置成固定IP的本地连接再改成自动获取IP地址"><a href="#5-把刚才设置成固定IP的本地连接再改成自动获取IP地址" class="headerlink" title="5. 把刚才设置成固定IP的本地连接再改成自动获取IP地址"></a>5. 把刚才设置成固定IP的本地连接再改成自动获取IP地址</h3><p><img src="https://dva6.com/usr/uploads/2017/08/2391785601.png" alt="r22.png"> 因为我们刷的是端口反转的版本，现在你的路由器端口排列如下 <img src="https://dva6.com/usr/uploads/2017/08/1561236387.png" alt="R30.png"> 请把接外网网线接到原先标识为LAN1（蓝色第一个）的端口，它现在已经变为WAN口，其余电脑接余下的四个端口，有千兆内网需求可以买一个千兆交换机接在LAN2（蓝色第二个），然后所有内网机器连接交换机。</p>
+<h3 id="6-进Padavan后台配置Shadowsocks自动翻墙"><a href="#6-进Padavan后台配置Shadowsocks自动翻墙" class="headerlink" title="6. 进Padavan后台配置Shadowsocks自动翻墙"></a>6. 进Padavan后台配置Shadowsocks自动翻墙</h3><p>路由器自动重启指示灯显示如下表示已经成功启动，你会发现烦人的LOGO灯不亮了^_^ <img src="https://dva6.com/usr/uploads/2017/08/2000844612.jpg" alt="Padavan9.jpg"> 其后台管理IP地址为 <code>192.168.123.1</code> 默认账号/密码为：admin/admin，默认的wifi密码为<code>1234567890</code> <img src="https://dva6.com/usr/uploads/2017/08/2133380750.png" alt="r23.png"> 登陆后台，找到<code>shadowsocks</code>的选项，像配置本地客户端一样配置一下 工作模式建议选择第二个 <strong>【2】 gfwlist</strong> (只有被墙站点才走代理） <img src="https://dva6.com/usr/uploads/2017/08/2045308008.png" alt="r24.png"> 配置完成后别忘了 <strong>应用本页面设置</strong> <img src="https://dva6.com/usr/uploads/2017/08/4101841730.png" alt="r25.png"> 好了，你可以访问下Google能不能正常访问了 <img src="https://dva6.com/usr/uploads/2017/08/261919983.png" alt="r26.png"> 别忘了配置一下无线设置，然后把你的移动设备连接上去。 <img src="https://dva6.com/usr/uploads/2017/08/2135613016.png" alt="r27.png"> 好了，教程到此结束！ Enjoy your freedom network！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/y1s/" rel="tag"># y1s</a>
+          
+            <a href="/tags/智能翻墙/" rel="tag"># 智能翻墙</a>
+          
+            <a href="/tags/breed/" rel="tag"># breed</a>
+          
+            <a href="/tags/newifi-y1s/" rel="tag"># newifi y1s</a>
+          
+            <a href="/tags/padavan/" rel="tag"># padavan</a>
+          
+            <a href="/tags/y1s-刷机/" rel="tag"># y1s 刷机</a>
+          
+            <a href="/tags/y1s刷breed/" rel="tag"># y1s刷breed</a>
+          
+            <a href="/tags/y1s刷固件/" rel="tag"># y1s刷固件</a>
+          
+            <a href="/tags/刷breed/" rel="tag"># 刷breed</a>
+          
+            <a href="/tags/外贸路由器/" rel="tag"># 外贸路由器</a>
+          
+            <a href="/tags/小白教程/" rel="tag"># 小白教程</a>
+          
+            <a href="/tags/手把手教程/" rel="tag"># 手把手教程</a>
+          
+            <a href="/tags/打造自己的外贸路由器/" rel="tag"># 打造自己的外贸路由器</a>
+          
+            <a href="/tags/智能翻墙路由器/" rel="tag"># 智能翻墙路由器</a>
+          
+            <a href="/tags/智能翻墙路由器打造/" rel="tag"># 智能翻墙路由器打造</a>
+          
+            <a href="/tags/科学上网/" rel="tag"># 科学上网</a>
+          
+            <a href="/tags/老毛子固件/" rel="tag"># 老毛子固件</a>
+          
+            <a href="/tags/路由器/" rel="tag"># 路由器</a>
+          
+            <a href="/tags/路由器科学上网/" rel="tag"># 路由器科学上网</a>
+          
+            <a href="/tags/路由器翻墙/" rel="tag"># 路由器翻墙</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/31/shadowsocks-with-proxifier-global-over-the-gfw/" rel="next" title="Shadowsocks配合Proxifier实现全局翻墙">
+                <i class="fa fa-chevron-left"></i> Shadowsocks配合Proxifier实现全局翻墙
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/02/buy-a-newifi-y1s-router/" rel="prev" title="买的新路由 Newifi Y1s到了，开箱！">
+                买的新路由 Newifi Y1s到了，开箱！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#购买一台智能路由器"><span class="nav-number">1.</span> <span class="nav-text">购买一台智能路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刷老毛子Padavan固件"><span class="nav-number">2.</span> <span class="nav-text">刷老毛子Padavan固件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始教程"><span class="nav-number">3.</span> <span class="nav-text">开始教程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进路由器后台看看，各项功能是否正常"><span class="nav-number">4.</span> <span class="nav-text">进路由器后台看看，各项功能是否正常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正常上网之后，下载下列刷机的文件备用"><span class="nav-number">5.</span> <span class="nav-text">正常上网之后，下载下列刷机的文件备用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-路由器进恢复模式"><span class="nav-number">6.</span> <span class="nav-text">1. 路由器进恢复模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置电脑本地IP"><span class="nav-number">7.</span> <span class="nav-text">2. 设置电脑本地IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-进入恢复后台刷入-Breed"><span class="nav-number">8.</span> <span class="nav-text">3. 进入恢复后台刷入 Breed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-进入Breed刷入-Padavan固件"><span class="nav-number">9.</span> <span class="nav-text">4. 进入Breed刷入 Padavan固件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-把刚才设置成固定IP的本地连接再改成自动获取IP地址"><span class="nav-number">10.</span> <span class="nav-text">5. 把刚才设置成固定IP的本地连接再改成自动获取IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-进Padavan后台配置Shadowsocks自动翻墙"><span class="nav-number">11.</span> <span class="nav-text">6. 进Padavan后台配置Shadowsocks自动翻墙</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/07/31/how-to-make-a-autoproxy-router/';
+          this.page.identifier = '2017/07/31/how-to-make-a-autoproxy-router/';
+          this.page.title = '在路由器上配置SS！手把手打造自己的外贸路由器、智能翻墙路由器，Newifi Y1s刷Padavan固件手把手教程';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="为减少滥用，设置回复可见服务器信息。 服务器是用阿里云国际版的10美元/月VPS搭建，每月2T流量，位于阿里云新加坡机房，对国内速度优秀。但多人使用可能导致速度波动大！ 博主不对稳定性做任何保证~  不定时修改IP、密码、端口，发现不能用了请回这里看看。服务器可用性、剩余流量可在这里查询 为了安全性，此服务端用的是ssr，其混淆功能可一定程度减少服务器被墙的机率，和原版shadowsocks兼容不">
+<meta property="og:type" content="website">
+<meta property="og:title" content="共享ss">
+<meta property="og:url" content="http://yoursite.com/share-ss-server/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="为减少滥用，设置回复可见服务器信息。 服务器是用阿里云国际版的10美元/月VPS搭建，每月2T流量，位于阿里云新加坡机房，对国内速度优秀。但多人使用可能导致速度波动大！ 博主不对稳定性做任何保证~  不定时修改IP、密码、端口，发现不能用了请回这里看看。服务器可用性、剩余流量可在这里查询 为了安全性，此服务端用的是ssr，其混淆功能可一定程度减少服务器被墙的机率，和原版shadowsocks兼容不">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:image" content="https://downloads.skwing.com/ssr/ssr.png">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.871Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="共享ss">
+<meta name="twitter:description" content="为减少滥用，设置回复可见服务器信息。 服务器是用阿里云国际版的10美元/月VPS搭建，每月2T流量，位于阿里云新加坡机房，对国内速度优秀。但多人使用可能导致速度波动大！ 博主不对稳定性做任何保证~  不定时修改IP、密码、端口，发现不能用了请回这里看看。服务器可用性、剩余流量可在这里查询 为了安全性，此服务端用的是ssr，其混淆功能可一定程度减少服务器被墙的机率，和原版shadowsocks兼容不">
+<meta name="twitter:image" content="https://downloads.skwing.com/ssr/ssr.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/share-ss-server/"/>
+
+
+
+
+
+  <title>共享ss | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">共享ss</h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <h3 id="为减少滥用，设置回复可见服务器信息。"><a href="#为减少滥用，设置回复可见服务器信息。" class="headerlink" title="为减少滥用，设置回复可见服务器信息。"></a>为减少滥用，设置回复可见服务器信息。</h3><hr>
+<p>服务器是用阿里云国际版的10美元/月VPS搭建，每月2T流量，位于阿里云新加坡机房，对国内速度优秀。但多人使用可能导致速度波动大！ 博主不对稳定性做任何保证~ <img src="https://downloads.skwing.com/ssr/ssr.png" alt="ssr server"></p>
+<h3 id="不定时修改IP、密码、端口，发现不能用了请回这里看看。"><a href="#不定时修改IP、密码、端口，发现不能用了请回这里看看。" class="headerlink" title="不定时修改IP、密码、端口，发现不能用了请回这里看看。"></a>不定时修改IP、密码、端口，发现不能用了请回这里看看。</h3><p>服务器可用性、剩余流量可在这里查询 为了安全性，此服务端用的是ssr，其混淆功能可一定程度减少服务器被墙的机率，和原版shadowsocks兼容不佳，请在这里下载SSR的专用客户端。 使用方法可以参考<a href="https://dva6.com/archives/use-bwg-through-the-GFW.html" target="_blank" rel="noopener">电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程</a>一文中的 <strong>配置shadowsocks本地客户端</strong> 部分，大同小异，主要就是选择<strong>右键单击小飞机图标</strong>然后选择<strong>二维码扫描</strong>，服务信息自动填好，保存后选择<strong>系统代理模式</strong>中的<strong>PAC模式</strong>，再在<strong>代理规则</strong>里选择<strong>全局</strong>就可以了。如下图： 手机用户安装客户端后打开，点左上角 <code>shadowsocksR</code> 之后点右下角的 <strong>加号</strong> 在弹出的菜单选择 <strong>扫描二维码</strong> 扫描上面的二维码后，在设置页面把 <code>路由</code> 从 <code>全局</code> 改为 <code>绕过局域网和中国大陆地址</code> 就可以了。 PS：手机里如果没有安装二维码扫描app的话，会提示需要安装。官方Play市场链接为 <a href="https://play.google.com/store/apps/details?id=com.google.zxing.client.android" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=com.google.zxing.client.android</a> 因SSR作者删除项目的原因，APP里给出的直接下载功能已不可用，这里给出<a href="https://downloads.skwing.com/apk/Barcode%20Scanner_v4.7.6.apk" target="_blank" rel="noopener">备用下载链接</a>，请不方便上Play市场下载的朋友在这下载。 <strong>此共享服务器只为方便外贸圈朋友访问Google而设，请勿用于非法活动（请遵守中国法律），请勿使用它BT、PT下载，滥发邮件、扫描端口、暴力破解！</strong> 博主保留公布滥用者IP的权利！ <strong>需要稳定ss账号请给我发邮件，E-mail: admin(at)skwing.com</strong></p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为减少滥用，设置回复可见服务器信息。"><span class="nav-number">1.</span> <span class="nav-text">为减少滥用，设置回复可见服务器信息。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不定时修改IP、密码、端口，发现不能用了请回这里看看。"><span class="nav-number">2.</span> <span class="nav-text">不定时修改IP、密码、端口，发现不能用了请回这里看看。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/share-ss-server/index.html';
+          this.page.identifier = 'share-ss-server/index.html';
+          this.page.title = '共享ss';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

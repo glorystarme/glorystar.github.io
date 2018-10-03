@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="shadowsocks,教程,ss,系列教程,翻墙," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="因为博主为Google脑残粉，自从几年前Google被墙后日子比较难过，度娘真的是没法满足搜索方面的需求！搜索英文网页用百度的话，出来的结果是灾难性的。 所以博主花了很多精力研究怎么翻过这段横亘在中国网民和世界互联网的高墙–长城防火墙 Great Fire Wall 简称GFW，从最开始的VPN、Tor到GoAgent和Softether，看着这些工具一个个失效，亲眼见证了这段高墙一点一点加高的过">
+<meta name="keywords" content="shadowsocks,教程,ss,系列教程,翻墙">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shadowsock翻墙系列教程  前言：Shadowsocks的前世今生&amp;来世">
+<meta property="og:url" content="http://yoursite.com/2016/06/09/shadowsock-tutorial-series-1/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="因为博主为Google脑残粉，自从几年前Google被墙后日子比较难过，度娘真的是没法满足搜索方面的需求！搜索英文网页用百度的话，出来的结果是灾难性的。 所以博主花了很多精力研究怎么翻过这段横亘在中国网民和世界互联网的高墙–长城防火墙 Great Fire Wall 简称GFW，从最开始的VPN、Tor到GoAgent和Softether，看着这些工具一个个失效，亲眼见证了这段高墙一点一点加高的过">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.864Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shadowsock翻墙系列教程  前言：Shadowsocks的前世今生&amp;来世">
+<meta name="twitter:description" content="因为博主为Google脑残粉，自从几年前Google被墙后日子比较难过，度娘真的是没法满足搜索方面的需求！搜索英文网页用百度的话，出来的结果是灾难性的。 所以博主花了很多精力研究怎么翻过这段横亘在中国网民和世界互联网的高墙–长城防火墙 Great Fire Wall 简称GFW，从最开始的VPN、Tor到GoAgent和Softether，看着这些工具一个个失效，亲眼见证了这段高墙一点一点加高的过">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/09/shadowsock-tutorial-series-1/"/>
+
+
+
+
+
+  <title>Shadowsock翻墙系列教程  前言：Shadowsocks的前世今生&来世 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/09/shadowsock-tutorial-series-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Shadowsock翻墙系列教程  前言：Shadowsocks的前世今生&来世</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-09T21:31:00+08:00">
+                2016-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/shadowsocks/" itemprop="url" rel="index">
+                    <span itemprop="name">shadowsocks</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/shadowsocks/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/06/09/shadowsock-tutorial-series-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/06/09/shadowsock-tutorial-series-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>因为博主为Google脑残粉，自从几年前Google被墙后日子比较难过，度娘真的是没法满足搜索方面的需求！搜索英文网页用百度的话，出来的结果是灾难性的。</p>
+<p>所以博主花了很多精力研究怎么翻过这段横亘在中国网民和世界互联网的高墙–长城防火墙 Great Fire Wall 简称GFW，从最开始的VPN、Tor到GoAgent和Softether，看着这些工具一个个失效，亲眼见证了这段高墙一点一点加高的过程。</p>
+<p>党的某位先贤曾有言：人民群众的智慧是无限的！我们在见证着墙加高的同时，墙的筑造者同时也在见证着这句话，这绝对是一个讽刺！</p>
+<p>Shadowsocks(缩写ss)，中文名“影梭”，一个快速安全的Socks5代理，是在上述工具失效后由国内大神程序员@clowwindy于2013年开发出来的，发布到Github后因为其快速、高效，穿墙稳定而受到欢迎！最初只有Python版并且只有Linux系统能用，因其优点，各路大神为其添砖加瓦，目前已经发展到各主流平台全覆盖(Windows/Linux/Mac OS X/Android/IOS/Openwrt)，是目前最好用的翻墙方案。</p>
+<p>因其造成的影响太大，clowwindy于2015年8月被警察找上门要求其停止开发Shadowsocks并删除所有已发布的代码。clowwindy别无选择，选择妥协，于其后删除了代码，但因为这个项目是完全开源的，之后就有shadowsocksR 作者 @breakwa11宣布会继续开发新版本，项目并不会因为创始人的离去而中断！</p>
+<p>虽然clowwindy已经不再开发维护Shadowsocks，但我们还是要记住clowwindy这个名字！</p>
+<p>即使以后shadowsocks被高墙找到有效封杀的办法，我们相信也会有别的工具不断涌现，只要国内还有人对自由的互联网的渴求。</p>
+<p>我们最终还是希望这堵高墙能像横亘在东德西德间的那道柏林墙一样轰然倒塌！</p>
+<p>博主去年发过一篇博文 <a href="https://dva6.com/archives/use-ss-fq.html" target="_blank" rel="noopener">目前最好的翻墙方式 &amp;&amp; shadowsocks翻墙傻瓜教程</a>，帮助到了一些网友，很高兴！现在再以审视的目光看待它，平心而论，写的还是比较混乱的，又历经了多次更新，现在看起来可读性比较差，在这里挖个坑，博主要写一个系列教程，系统的整理下目前博主掌握的这方面的知识。</p>
+<p><em>知识若不分享，实在没有意义！</em> 博主很赞同这句话，分享知识时要进行系统的整理，学得一些知识和把这些知识分享给别人，是两件完全不同的事，分享知识比学得知识更难，但会巩固你已学得的知识，整理成文字也方便自己日后查找，何乐而不为？<br>下篇预告：<strong>Shadowsock翻墙系列教程 选择合适自己的境外服务器</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shadowsocks/" rel="tag"># shadowsocks</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/ss/" rel="tag"># ss</a>
+          
+            <a href="/tags/系列教程/" rel="tag"># 系列教程</a>
+          
+            <a href="/tags/翻墙/" rel="tag"># 翻墙</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/30/openwrt-install-xunlei-xware/" rel="next" title="openwrt安装xware 迅雷远程下载">
+                <i class="fa fa-chevron-left"></i> openwrt安装xware 迅雷远程下载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/09/117/" rel="prev" title="新入手一个便宜的KVM架构VPS Virmach家的7.5刀年付机器">
+                新入手一个便宜的KVM架构VPS Virmach家的7.5刀年付机器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2016/06/09/shadowsock-tutorial-series-1/';
+          this.page.identifier = '2016/06/09/shadowsock-tutorial-series-1/';
+          this.page.title = 'Shadowsock翻墙系列教程  前言：Shadowsocks的前世今生&来世';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

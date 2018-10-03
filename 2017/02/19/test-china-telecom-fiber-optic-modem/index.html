@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iptv,光纤,双拨,多拨,改桥接,无线,桥接,电信,路由模式改桥接," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="之前村里集中光改时嫌还要交200块改造费，就没有去申请光改。不知道是不是心理原因，自从村里光改后大多数人都用上100M光纤网络之后，越来越觉得家里的6M ADSL小水管慢，前阵终于受不了，打10000号申请光改，最终交了100块让其实施光改，之前美名为集中光改真是坑，集中光改的费用居然比单独申请的费用还要高！另外升级光纤要每月加30块IPTV费用（借网络机顶盒给你使用）。原宽带为1080元/年包电">
+<meta name="keywords" content="iptv,光纤,双拨,多拨,改桥接,无线,桥接,电信,路由模式改桥接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="家里改光纤 折腾电信光猫记">
+<meta property="og:url" content="http://yoursite.com/2017/02/19/test-china-telecom-fiber-optic-modem/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="之前村里集中光改时嫌还要交200块改造费，就没有去申请光改。不知道是不是心理原因，自从村里光改后大多数人都用上100M光纤网络之后，越来越觉得家里的6M ADSL小水管慢，前阵终于受不了，打10000号申请光改，最终交了100块让其实施光改，之前美名为集中光改真是坑，集中光改的费用居然比单独申请的费用还要高！另外升级光纤要每月加30块IPTV费用（借网络机顶盒给你使用）。原宽带为1080元/年包电">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/03/1028205101.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/03/261573968.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/03/2720885882.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/03/3574404351.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/03/4220825027.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/03/2089202683.png">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.865Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="家里改光纤 折腾电信光猫记">
+<meta name="twitter:description" content="之前村里集中光改时嫌还要交200块改造费，就没有去申请光改。不知道是不是心理原因，自从村里光改后大多数人都用上100M光纤网络之后，越来越觉得家里的6M ADSL小水管慢，前阵终于受不了，打10000号申请光改，最终交了100块让其实施光改，之前美名为集中光改真是坑，集中光改的费用居然比单独申请的费用还要高！另外升级光纤要每月加30块IPTV费用（借网络机顶盒给你使用）。原宽带为1080元/年包电">
+<meta name="twitter:image" content="https://dva6.com/usr/uploads/2017/03/1028205101.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/19/test-china-telecom-fiber-optic-modem/"/>
+
+
+
+
+
+  <title>家里改光纤 折腾电信光猫记 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/test-china-telecom-fiber-optic-modem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">家里改光纤 折腾电信光猫记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-19T21:28:00+08:00">
+                2017-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/默认分类/" itemprop="url" rel="index">
+                    <span itemprop="name">默认分类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/19/test-china-telecom-fiber-optic-modem/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/02/19/test-china-telecom-fiber-optic-modem/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前村里集中光改时嫌还要交200块改造费，就没有去申请光改。不知道是不是心理原因，自从村里光改后大多数人都用上100M光纤网络之后，越来越觉得家里的6M ADSL小水管慢，前阵终于受不了，打10000号申请光改，最终交了100块让其实施光改，之前美名为集中光改真是坑，集中光改的费用居然比单独申请的费用还要高！另外升级光纤要每月加30块IPTV费用（借网络机顶盒给你使用）。原宽带为1080元/年包电话月租，算起来最终的费用就是 1080+360=1440/年 包固定电话月租。光改后最少保持这个套餐2年。</p>
+<p>申请是年前申请的，大概农历26日左右吧，之后等到大年十二来装，当天装好网络就通了，并不像10000号说的那样可能会断网一两天。这一点不错。</p>
+<p>过来安装那天要上班，下班回家就测试了速率能不能达到，合同上写的为下行100Mbps，上行2Mbps，结果为下行110-120Mbps，上行为4-6Mbps，非常不错，多次测试都差不多这个速度，晚上上网高峰测试也不会有波动。</p>
+<p>电信配的光猫为友华PT921G 一千兆一百兆一ssid，默认的用户名密码权限非常低，能改动的东西非常有限，试着用电信通用的超级管理员账号 telecomadmin 密码 nE7jA%5m 登陆，居然直接就登陆上去，庆幸没有被电信更改，要不又得费一番手脚调出密码。</p>
+<p>超级管理员密码被更改了的情况，大家可以自行搜索怎么解决，网上这类教程非常多，看了过程也并不是特别复杂，我这里就不展开说了。</p>
+<p>这光猫电信人员装好默认用的是路由模式，Internet绑定千兆口和ssid，有线通过千兆口连接上网，手机笔记本之类无线设置可以直接连接其Chinanet-xxxx开头的WIFI上网。网络要求不高的人这种方式确实是最省心的，有线LAN口不够用的话可以另买个5口交换机进行扩展。</p>
+<p>以上方式于我肯定是不适用的，原因有二，其一：这光猫性能有限，达不到我的要求；其二：wifi性能弱，家里无线设备最多时能达20台，用这台光猫带肯定是一个噩梦。</p>
+<p>最终的方案是：</p>
+<p>Internet改光猫直接拨号为纯桥接，绑定千兆口，之前的千兆路由–网件WNR3500Lv1接千兆口拨号，作为家里的主路由使用。<br>WNR3500Lv1刷了tomato,支持双wan，以后再接入移动光纤可以也接入此路由实现流量走自定义路由，线路负载均衡。其无线信号比较孱弱，干脆关闭掉它的无线功能，另加一个NEWIFI MINI接入LAN口作AP使用。</p>
+<p>最后就是IPTV了，每月交30块不能白交，电信安装人员说要看IPTV必须把IPTV机顶盒和光猫用网线连通，接到光纤的百兆口，这个口默认是绑定IPTV的。IPTV的账号密码之类电信安装人员已经直接在机顶台里设好了，我试着连接网线的光猫IPTV口之后就直接可看了。</p>
+<p>问题就是家里之前装修时并没有在电视机旁边留有网线接口，直接拉线的的话非常不美观，看着接受不了。看到机顶盒支持无线WIFI，就寻思可不可以通过连接无线实现IPTV功能。</p>
+<p>光猫改路由模式为桥接模式的教程较多，但实现IPTV无线连接资源教程就非常少了，我没有搜过什么有用的信息，最终自己研究，实现了如下功能</p>
+<p>1 光猫路由模式改桥接模式，另接性能强的路由器拨号<br>2 IPTV无线连接，和网线say goodbye<br>3 双拨，搞清楚怎么弄了，不过我的宽带账号不支持，把办法说出来，大家自行测试。</p>
+<p>以上这些改动都需要超级管理员账号才能完成，默认的的账户为 telecomadmin 密码为 nE7jA%5m 如被电信人员更改了的话，请自行搜索相关文章调出密码。</p>
+<p>下面说下操作办法<br>1 登陆超级管理员，默认IP为 192.168.1.1 账户为 telecomadmin 密码为 nE7jA%5m<br><img src="https://dva6.com/usr/uploads/2017/03/1028205101.png" alt="登陆"><br>2 定位到网络–宽带设置–连接名称 下拉选单可以看到有三个连接 VOICE为电话语音服务 OTHER为IPTV INTERNET为宽带相关的，我们要改的就是这个，默认为路由模式，其模式为Route，绑定LAN1和SSID1，我们改为桥接Bridge，绑定选项选LAN1千兆口，把SSID1去除勾选（后面IPTV无线连接要用到，一个SSID无法同时关联两个连接），链接方式选择PPP，其余选项不用更改，默认即可，设置好后保存，发现网络不通后即可连接路由器到LAN1口进行拨号，光猫路由改桥接搞定。<br><img src="https://dva6.com/usr/uploads/2017/03/261573968.png" alt="改桥接"><br>设置完成是这样的<br><img src="https://dva6.com/usr/uploads/2017/03/2720885882.png" alt="Bridge Done"></p>
+<p>3 连接名称定位到OTHER，这个是IPTV的连接项，默认为Bridge桥接，绑定LAN2百兆口，如下<br><img src="https://dva6.com/usr/uploads/2017/03/3574404351.png" alt="IPTV 桥接"><br>要改无线连接的话，桥接模式无法无线拨号，所以必须在光猫上完成拨号，把Bridge改为Route路由模式，设置如下（，注意必须绑定SSID1才能无线连接，改为路由模式之后必须填写IPTV拨号账号和密码，此信息一般可在安装单上找到，我这边是安装人员直接贴在IPTV机顶盒上的。<br><img src="https://dva6.com/usr/uploads/2017/03/4220825027.png" alt="IPTV 路由"><br>查看IPTV光猫拨号IPTV成功与否可以到 状态–网络侧信息 查看OTHER连接是否成功获取到IP。看到获取IP了，就可以在机顶盒上连接到SSID1，拔掉网线了，Enjoy Your wireless IPTV</p>
+<p>4 测试能否双拨可以通过新建一条连接，模式选Route，承载业务INTERNET，绑定LAN2（前面设置IPTV绑定了LAN2的话要先解绑），链接方式选PPP，最下面填入拨号账户和密码，保存之后切换到 状态–网络侧信息 查看新建的连接能否获取IP，如果是的话，恭喜你，你的账号支持多拨！如果一直是“连接中”的话，代表你的账号不能多拨，别费时间折腾了。<br>我的测试结果是不支持，It is so bad…<br><img src="https://dva6.com/usr/uploads/2017/03/2089202683.png" alt="status"></p>
+<p>之前在深圳办理的电信100M光纤的账号就可以，我拨号4次，叠加宽带到400M下行，8M上行~ 这种叠加在你普通上网时并不会感到什么区别，在多线程下载时，可以看到效果。</p>
+<p>Okay，就写到这里吧&amp;^_^&amp;</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iptv/" rel="tag"># iptv</a>
+          
+            <a href="/tags/光纤/" rel="tag"># 光纤</a>
+          
+            <a href="/tags/双拨/" rel="tag"># 双拨</a>
+          
+            <a href="/tags/多拨/" rel="tag"># 多拨</a>
+          
+            <a href="/tags/改桥接/" rel="tag"># 改桥接</a>
+          
+            <a href="/tags/无线/" rel="tag"># 无线</a>
+          
+            <a href="/tags/桥接/" rel="tag"># 桥接</a>
+          
+            <a href="/tags/电信/" rel="tag"># 电信</a>
+          
+            <a href="/tags/路由模式改桥接/" rel="tag"># 路由模式改桥接</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/30/ss-share-server-change-passwd-regularly/" rel="next" title="ss公共服务器定时更改密码并同步更新到博客">
+                <i class="fa fa-chevron-left"></i> ss公共服务器定时更改密码并同步更新到博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/24/olmypus-ls-p2/" rel="prev" title="入手专业型录音笔 奥林巴斯 OLMYPUS LS-P2">
+                入手专业型录音笔 奥林巴斯 OLMYPUS LS-P2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/02/19/test-china-telecom-fiber-optic-modem/';
+          this.page.identifier = '2017/02/19/test-china-telecom-fiber-optic-modem/';
+          this.page.title = '家里改光纤 折腾电信光猫记';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

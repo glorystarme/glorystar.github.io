@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="foxmail添加gmail,foxmail设置gmail,gmail,不翻墙访问gmail,访问gmail," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="本文使用邮件客户端 Foxmail 来达到免翻墙使用Gmail的目的。 需要工具： 临时翻墙工具 国外Ping工具 Foxmail客户端 1. Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。使用翻墙工具登陆Web Gmail，如下图设置  注意： Foxmail无法使用Web认证，被Google认为是不够安全的应用，你还需要在设置里 允许不够安">
+<meta name="keywords" content="foxmail添加gmail,foxmail设置gmail,gmail,不翻墙访问gmail,访问gmail">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不翻墙使用Gmail 教你如何在Foxmail里添加Gmail邮箱">
+<meta property="og:url" content="http://yoursite.com/2017/08/12/how-to-use-gmail-without-proxy/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="本文使用邮件客户端 Foxmail 来达到免翻墙使用Gmail的目的。 需要工具： 临时翻墙工具 国外Ping工具 Foxmail客户端 1. Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。使用翻墙工具登陆Web Gmail，如下图设置  注意： Foxmail无法使用Web认证，被Google认为是不够安全的应用，你还需要在设置里 允许不够安">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3252939240.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2594367344.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3776831557.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/2374868336.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/08/3458805761.png">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.870Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="不翻墙使用Gmail 教你如何在Foxmail里添加Gmail邮箱">
+<meta name="twitter:description" content="本文使用邮件客户端 Foxmail 来达到免翻墙使用Gmail的目的。 需要工具： 临时翻墙工具 国外Ping工具 Foxmail客户端 1. Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。使用翻墙工具登陆Web Gmail，如下图设置  注意： Foxmail无法使用Web认证，被Google认为是不够安全的应用，你还需要在设置里 允许不够安">
+<meta name="twitter:image" content="https://dva6.com/usr/uploads/2017/08/3252939240.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/12/how-to-use-gmail-without-proxy/"/>
+
+
+
+
+
+  <title>不翻墙使用Gmail 教你如何在Foxmail里添加Gmail邮箱 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/12/how-to-use-gmail-without-proxy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">不翻墙使用Gmail 教你如何在Foxmail里添加Gmail邮箱</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-12T23:42:00+08:00">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/默认分类/" itemprop="url" rel="index">
+                    <span itemprop="name">默认分类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/12/how-to-use-gmail-without-proxy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/12/how-to-use-gmail-without-proxy/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文使用邮件客户端 Foxmail 来达到免翻墙使用Gmail的目的。 需要工具： 临时翻墙工具 国外Ping工具 Foxmail客户端</p>
+<h3 id="1-Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。"><a href="#1-Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。" class="headerlink" title="1. Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。"></a>1. Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。</h3><p>使用翻墙工具登陆Web Gmail，如下图设置 <img src="https://dva6.com/usr/uploads/2017/08/3252939240.png" alt="imap"> <strong>注意：</strong> Foxmail无法使用Web认证，被Google认为是<code>不够安全的应用</code>，你还需要在<strong>设置</strong>里 <code>允许不够安全的应用登陆</code></p>
+<h3 id="2-开启IMAP之后其设置页面最下方会有设置指南，其显示如下"><a href="#2-开启IMAP之后其设置页面最下方会有设置指南，其显示如下" class="headerlink" title="2. 开启IMAP之后其设置页面最下方会有设置指南，其显示如下"></a>2. 开启IMAP之后其设置页面最下方会有设置指南，其显示如下</h3><p><img src="https://dva6.com/usr/uploads/2017/08/2594367344.png" alt="setup"></p>
+<h3 id="3-使用超级Ping工具取得可用IP。"><a href="#3-使用超级Ping工具取得可用IP。" class="headerlink" title="3. 使用超级Ping工具取得可用IP。"></a>3. 使用超级Ping工具取得可用IP。</h3><p>打开站长站超级ping在线工具，填入Gmail的IMAP服务器域名 <code>imap.gmail.com</code> 在下方取消全选，只选择海外（避免DNS污染），在返回结果里随便复制一个IP，这就是我们要用的IP。 </p>
+<h3 id="4-验证IP可用性。"><a href="#4-验证IP可用性。" class="headerlink" title="4. 验证IP可用性。"></a>4. 验证IP可用性。</h3><p>按<code>CTRL键</code> + <code>R键</code> 打开运行对话框，输入 <code>cmd</code> 打开命令行界面， 输入ping <code>我们刚才复制的IP</code>(右键为粘贴)，返回值全部超时表示IP不可用，有返回值表示IP可用。如IP不可用，再去刚才的页面复制另一个IP，再Ping一次，直到找到能Ping通的IP为止。如下图（点击播放） </p>
+<h3 id="6-设置Foxmail客户端"><a href="#6-设置Foxmail客户端" class="headerlink" title="6. 设置Foxmail客户端"></a>6. 设置Foxmail客户端</h3><p>输入Gmail账号和密码，之后点<code>手动设置</code>，邮箱类型选<code>IMAP</code> ，把收件服务器和发件服务器替换为我们刚才复制的IP。  确定之后就可以用了。关掉翻墙工具也能正常使用，只要IP不被封。 如你的Foxmail已经设置了第一个邮箱，就按如下图添加Gmail <img src="https://dva6.com/usr/uploads/2017/08/3776831557.png" alt="1"> <img src="https://dva6.com/usr/uploads/2017/08/2374868336.png" alt="2"> <img src="https://dva6.com/usr/uploads/2017/08/3458805761.png" alt="3"> 之后就如上面教程那样设置就好了。 发现IP不可用之后可以重复第三步，找到可用的IP替换掉在用的IP。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/foxmail添加gmail/" rel="tag"># foxmail添加gmail</a>
+          
+            <a href="/tags/foxmail设置gmail/" rel="tag"># foxmail设置gmail</a>
+          
+            <a href="/tags/gmail/" rel="tag"># gmail</a>
+          
+            <a href="/tags/不翻墙访问gmail/" rel="tag"># 不翻墙访问gmail</a>
+          
+            <a href="/tags/访问gmail/" rel="tag"># 访问gmail</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/10/buy-a-panasonic-cf-sx2/" rel="next" title="入手一台松下CF-SX2笔记本电脑">
+                <i class="fa fa-chevron-left"></i> 入手一台松下CF-SX2笔记本电脑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/22/registration-aliyun-intl-and-buy-vps/" rel="prev" title="注册阿里云国际版 开通与中国物理距离近的VPS">
+                注册阿里云国际版 开通与中国物理距离近的VPS <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。"><span class="nav-number">1.</span> <span class="nav-text">1. Gmail现在默认都是没有开启POP和IMAP的，建议使用IMAP，登陆Gmail设置开启IMAP。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-开启IMAP之后其设置页面最下方会有设置指南，其显示如下"><span class="nav-number">2.</span> <span class="nav-text">2. 开启IMAP之后其设置页面最下方会有设置指南，其显示如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用超级Ping工具取得可用IP。"><span class="nav-number">3.</span> <span class="nav-text">3. 使用超级Ping工具取得可用IP。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-验证IP可用性。"><span class="nav-number">4.</span> <span class="nav-text">4. 验证IP可用性。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-设置Foxmail客户端"><span class="nav-number">5.</span> <span class="nav-text">6. 设置Foxmail客户端</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/08/12/how-to-use-gmail-without-proxy/';
+          this.page.identifier = '2017/08/12/how-to-use-gmail-without-proxy/';
+          this.page.title = '不翻墙使用Gmail 教你如何在Foxmail里添加Gmail邮箱';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="shadowsocks,bandwagonhost,搬瓦工,教程,科学上网,翻墙,傻瓜教程," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="—2017-7-30更新— 本文成文于两年前，时间长了，有些东西也失效了，期间也经过多次修改，再次检视本文，有些地方写得比较混乱，可读性较差。 我又花了几天的时间更新了 翻墙服务商倒下了，那么我们自己搭梯子翻墙，搭梯子傻瓜手把手教程 ，请大家转到新文查看。 我是GOOGLE重度使用者，自从国内开始全国封堵GOOGLE之后，日子比较不好过，所以花了很多精力研究目前的各种FQ方式，之前一直使用VPN+">
+<meta name="keywords" content="shadowsocks,bandwagonhost,搬瓦工,教程,科学上网,翻墙,傻瓜教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="目前最好的翻墙方式 &amp;&amp; shadowsocks翻墙傻瓜教程">
+<meta property="og:url" content="http://yoursite.com/2015/04/02/use-ss-fq/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="—2017-7-30更新— 本文成文于两年前，时间长了，有些东西也失效了，期间也经过多次修改，再次检视本文，有些地方写得比较混乱，可读性较差。 我又花了几天的时间更新了 翻墙服务商倒下了，那么我们自己搭梯子翻墙，搭梯子傻瓜手把手教程 ，请大家转到新文查看。 我是GOOGLE重度使用者，自从国内开始全国封堵GOOGLE之后，日子比较不好过，所以花了很多精力研究目前的各种FQ方式，之前一直使用VPN+">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:image" content="https://dva6.com/images/1114.jpg">
+<meta property="og:image" content="https://dva6.com/images/1115.jpg">
+<meta property="og:image" content="https://dva6.com/images/1116.jpg">
+<meta property="og:image" content="https://dva6.com/images/1117.jpg">
+<meta property="og:image" content="https://dva6.com/images/1118.jpg">
+<meta property="og:image" content="https://dva6.com/images/1119.jpg">
+<meta property="og:image" content="https://dva6.com/images/1120.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2015/04/1065124785.jpg">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2015/04/4071940896.jpg">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.837Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="目前最好的翻墙方式 &amp;&amp; shadowsocks翻墙傻瓜教程">
+<meta name="twitter:description" content="—2017-7-30更新— 本文成文于两年前，时间长了，有些东西也失效了，期间也经过多次修改，再次检视本文，有些地方写得比较混乱，可读性较差。 我又花了几天的时间更新了 翻墙服务商倒下了，那么我们自己搭梯子翻墙，搭梯子傻瓜手把手教程 ，请大家转到新文查看。 我是GOOGLE重度使用者，自从国内开始全国封堵GOOGLE之后，日子比较不好过，所以花了很多精力研究目前的各种FQ方式，之前一直使用VPN+">
+<meta name="twitter:image" content="https://dva6.com/images/1114.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/04/02/use-ss-fq/"/>
+
+
+
+
+
+  <title>目前最好的翻墙方式 && shadowsocks翻墙傻瓜教程 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/04/02/use-ss-fq/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">目前最好的翻墙方式 && shadowsocks翻墙傻瓜教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-04-02T19:26:00+08:00">
+                2015-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/默认分类/" itemprop="url" rel="index">
+                    <span itemprop="name">默认分类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/04/02/use-ss-fq/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/04/02/use-ss-fq/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>—2017-7-30更新— 本文成文于两年前，时间长了，有些东西也失效了，期间也经过多次修改，再次检视本文，有些地方写得比较混乱，可读性较差。 我又花了几天的时间更新了 <a href="https://dva6.com/archives/use-bwg-through-the-GFW.html" target="_blank" rel="noopener">翻墙服务商倒下了，那么我们自己搭梯子翻墙，搭梯子傻瓜手把手教程</a> ，请大家转到新文查看。</strong></p>
+<p>我是GOOGLE重度使用者，自从国内开始全国封堵GOOGLE之后，日子比较不好过，所以花了很多精力研究目前的各种FQ方式，之前一直使用VPN+GOGENT，后来VPN被严重干扰，GOGENT自GOOGLE被全面封堵后也陷入残废，一度只能使用SSH隧道来上GOOGLE，SSH不是设计来让人翻墙用的，速度不能让我满意，至于自X门等轮子的东西，安全性不能保证，我是不用的，后来总算让我发现一个就目前来说最稳定，速度也最快的翻墙方式，在这里和大家分享下</p>
+<p>这个就是shadowsocks了，中文名叫影梭（很形象的翻译），开源的小型快速代理项目，发展至今已经很完善了，WINDOWS ANDROID ISO等系统都有支持 这是一个轻量化的应用 甚至能运行在路由器上实现自动翻墙，这个配置太复杂就不展开说了，这里主要说说怎么使用shadowsocks实现科学上网。<br>使用shadowsocks分两步：<br>第一步，搭建server端，需要有一个位于境外的能自由访问GOOGLE的服务器。<br>第二步，配置clent端，shadowsocks全平台都有客户端，图形化操作，基本没啥难度。</p>
+<p>使用独立服务器来搭建shadowsocks服务端太奢侈了，我们使用VPS(虚拟服务器）好了，相比独立服务器会便宜很多。<br>目前，美国那边有很多西海岸的便宜VPS，年付不到10美元，很小的钱，一顿像样的饭都不只这个钱了，国内访问速度较快，很适合搭梯子。</p>
+<p>个人推荐现在在站长中口碑不错的<a href="https://dva6.com/go/bwg" target="_blank" rel="noopener">“搬瓦工” BANDWAGONHOST</a>我推荐购买它<a href="https://dva6.com/go/bwg-9.9" target="_blank" rel="noopener">9.9美元年付的那款</a>；<br>2016-3-28更新：<a href="https://dva6.com/go/bwg-9.9" target="_blank" rel="noopener">9.9美元年付套餐</a>已断货，另外推荐<a href="https://dva6.com/go/bwg" target="_blank" rel="noopener">“搬瓦工” BANDWAGONHOST</a>目前有货的最具性价比的套餐。</p>
+<p>1：中国直连线路，年付19.99美元的套餐；KVM架构，包含一个独立IP，1000G月流量，512M内存 10G固态硬盘 网络为千兆网络，网络闲时甚至可以看YOUTUBE上的1080P。</p>
+<p>2： 中国直连线路 年付39.99美元的套餐，需要性能更好的套餐可以考虑这个，KVM架构，包含1个独立IP，2000GB月流量，1024M内存，20G固态硬盘，千兆网络。如需要多人使用（如公司使用），用这个套餐会更顺畅一点。</p>
+<p>以上两个套餐都是中国直连线路，只有Los Angeles一个机房可选，不可换机房，不过我们要的服务都是提供给中国的，直连线路有更好的访问延迟，也就没什么关系了。</p>
+<p>kvm架构是全虚拟架构，各个VPS独立资源，不像OPENVZ使用母机内核，相比openvz我们有更多的自主权，比如更换内核开启锐速或BBR加速，以后我有空再写个优化加速的教程。</p>
+<p>“搬瓦工” BANDWAGONHOST全部套餐情况可在这里查看，简单说明下，后面显示”order now”的都是可购买的，”out of stock”代表断货，没有标注”(no other locations available on this plan)”的都是可以自主更改机房的。”CHINA DIRECT ROUTE”中国直连路由，一般对中国用户会有更好的使用体验。有两种架构，相对来讲，KVM系统自主性更好，OPENVZ有更好的CPU表现。</p>
+<p>PS:搬瓦工有一个6%折扣码“BWH1ZBPVK”，购买时要记得使用哦！在Promotional Code那里填入。</p>
+<p><a href="https://dva6.com/archives/How-to-buy-BWGVPS.html" target="_blank" rel="noopener">如果你不知道如何进行购买，请参考此购买教程</a></p>
+<hr>
+<p>搬瓦工虽然技术过硬，VPS很少downline，但大量中国用户涌入也使得它对中国的线路表现不那么稳定（毕竟中美线路它无法控制）如你更注重质量可考虑一下以下三家目前世界上最大的VPS提供商</p>
+<p>1: <strong>Linode</strong> 高性能高稳定 是站长做站的首选，有VPS高富帅之称，做ss服务器也是杠杠的。<br>2: <strong>Vultr</strong> 全世界15个机房，后台易用性高于Linode<br>3: <strong>Digitalocean</strong> 很多大企业的选择，高稳定</p>
+<p>以上三家都是KVM架构的，有很多种手段优化速度。最低套餐都是5美元/月，账单粒度为小时，VPS可以随用随删，高性能，多机房，十几秒就能创建一个VPS并上线使用</p>
+<hr>
+<p>付款后VPS会即时开通，包含VPS信息的邮件会发至你的注册邮箱，里面包含VPS的IP、root密码、SSH端口等信息。<br>我们使用这些信息来登陆服务器搭建SHADOWSOCKS server端。</p>
+<p>更新：搬瓦工已经在其后台集成了<strong>shadowsocks一键安装功能</strong>，买了其VPS的朋友如果觉得命令行太过难弄可以通过它来安装shadowsocks，详见bandwagonhost“搬瓦工”在后台提供shadowsocks一键安装，对小白来说太贴心了,此方法只适用于搬瓦工的VPS哦。</p>
+<p>搬瓦工开通的VPS默认安装的系统为LINUX CENTOS，是使用命令行进行管理的，和我们日常使用WINDOWS图形介面有很大不同，我们需要下载一个工具来远程登陆并管理VPS，推荐使用SSH客户端putty，很小的绿色软件，免安装； <a href="https://dva6.com/go/putty" target="_blank" rel="noopener">官方下载地址在此</a> 这个地址某些运营商已经把它墙了，不能下载的朋友<a href="https://dva6.com/downloads/putty.zip" target="_blank" rel="noopener">请下载我提供的附件</a></p>
+<p>下载之后 打开putty<br><img src="https://dva6.com/images/1114.jpg" alt="登陆介面"></p>
+<p><img src="https://dva6.com/images/1115.jpg" alt="警告"></p>
+<p><img src="https://dva6.com/images/1116.jpg" alt="登陆"></p>
+<p><img src="https://dva6.com/images/1117.jpg" alt="命令行界面"></p>
+<p>进入类似上图的界面即表示你已成功登陆服务器，这是一台LINUX服务器，一切操作只能依靠命令行进行。<br>热心程序猿“秋水逸冰”制作了安装SS的傻瓜一键包，你只需要把几行命令就可以搭建好属于自己的SS服务端，大大降低了小白们的操作难度，对他表示感谢！有兴趣的可到他的一键包项目页参观参观，<a href="http://teddysun.com/357.html" target="_blank" rel="noopener">链接在此</a></p>
+<p>这几行命令为</p>
+<pre><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh
+chmod +x shadowsocks-libev.sh
+./shadowsocks-libev.sh 2&gt;&amp;1 | tee shadowsocks-libev.log
+</code></pre><p><strong>请复制上面三行命令，粘贴到命令行窗口，然后回车；回车后会提示你输入SS的密码，输好之后再回车；提示按任意键开始安装，随便按个键吧！在putty命令行界面里，鼠标右键即为粘贴。</strong><br>安装完成后，脚本提示如下：</p>
+<pre><code>Congratulations, shadowsocks-libev install completed!
+Your Server IP:your_server_ip
+Your Server Port:8989
+Your Password:your_password
+Your Local IP:127.0.0.1
+Your Local Port:1080
+Your Encryption Method:aes-256-cfb
+
+Welcome to visit: http://teddysun.com/357.html
+Enjoy it!
+</code></pre><p>这里面就是你的SHADOWS server端的信息了，记下来，配置客户端要用到。</p>
+<p>shadowsocks为开源程序，全平台都有支持的客户端 <a href="http://shadowsocks.org/en/download/clients.html" target="_blank" rel="noopener">官网下载页在此</a> 目前已经被墙，<a href="https://dva6.com/downloads/Shadowsocks.zip" target="_blank" rel="noopener">无法翻墙的朋友请下载我提供的附件</a> | <a href="https://dva6.com/downloads/Shadowsocks-win-2.5.6.zip" target="_blank" rel="noopener">更新为2.5.6版</a> | 或者linux上非常好用的Shadowsocks-Qt5，32位系统请下载<a href="https://dva6.com/downloads/ss-qt5-v2.7.0-win32.7z" target="_blank" rel="noopener">v2.7.0-win32.7z</a>，64位系统请下载<a href="https://dva6.com/downloads/ss-qt5-v2.7.0-win64.7z" target="_blank" rel="noopener">v2.7.0-win64.7z</a>。此为WIN7的客户端，XP也能使用，但需要安装<a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=21" target="_blank" rel="noopener">.net framework 3.5</a>。<br><strong>注意：此工具通过修改系统代理实现翻墙，可能会被360卫士或其它电脑安全管家之类的软件静默阻止，造成软件运行出错。运行前请退出某卫士或某管家，或把SS客户端加入其白名单！</strong><br>方便大家，顺便把Mac OS X和linux的客户端都搬运过来<br>Mac OS X GUI Client<br>ShadowsocksX: <a href="https://dva6.com/downloads/ShadowsocksX-2.6.3.dmg" target="_blank" rel="noopener">2.6.3.dmg</a><br>GoAgentX: <a href="https://dva6.com/downloads/GoAgentX-v2.2.9.dmg" target="_blank" rel="noopener">v2.2.9.dmg</a><br>Linux GUI Client<br>Shadowsocks-Qt5 Latest release 请直接参考此篇安装教程<br>我建议最好不要安装某卫士或管家，安装正统的杀毒软件，如卡巴斯基、NOD32、诺顿、McAfee，这些软件都不会对SS进行阻止！</p>
+<p>客户端为绿色软件，下载后解压即可使用，运行界面如图<br><img src="https://dva6.com/images/1118.jpg" alt="运行界面"></p>
+<p><img src="https://dva6.com/images/1119.jpg" alt="配置"></p>
+<p>好了 <strong>Enjoy your Google!</strong><br><img src="https://dva6.com/images/1120.jpg" alt="google"></p>
+<p>shadowsocks的android客户端也非常好用，具体请在PLAY上搜索 shadowsocks，如果手机上没有PLAY市场，<a href="https://dva6.com/downloads/com.github.shadowsocks.apk" target="_blank" rel="noopener">请下载我提供的附件</a> 2016-6-6更新为<a href="https://dva6.com/downloads/ss_2.10.4.apk" target="_blank" rel="noopener">ss_2.10.4.apk</a></p>
+<p>码了四个多小时辛苦码出此文,后断断续续修改我投入了很精力和时间，只希望能帮到大家,如果你要转载的话，希望你有网络上起码的道德，注明出处且提供原链接，谢谢！<br><a href="https://bandwagonhost.com/aff.php?aff=988" target="_blank" rel="noopener">bandwagonhost</a>购买链接我有加AFF，大家购买我能获得收益，如你觉得这样损害了你的利益，请在购买时把链接中间的aff=988去掉，谢谢！<br>大家有什么疑问请跟帖说下，我尽量解答~ 谢谢大家 希望大家都能使用自由的网络！<br>本文首发于<a href="http://bbs.fobshanghai.com/viewthread.php?tid=5632069&amp;extra=&amp;page=1" target="_blank" rel="noopener">FOBShanghai福步外贸论坛</a>，因其排版太过蛋痛，故转到此处。<br>补充阅读：<a href="https://dva6.com/archives/ss-precautions.html" target="_blank" rel="noopener">安全与否？shadowsocks使用几个注意事项</a></p>
+<p>———-2015-04-14更新———–<br>分享一下我目前在用的shadowsocks帐号，这个VPS月流量只有1T，请不要用它来下载，另外，如果我发现同时连接数太多，我会更改其密码，我可不想因为这个原因导致IP被封，最靠谱的方法还是自己搭建！另外，保证不会去监听大家的网络通信，我没有GFW那么下作！<br><img src="https://dva6.com/usr/uploads/2015/04/1065124785.jpg" alt="bw11.jpg"><br>使用方法</p>
+<ol>
+<li>下载shadowsocks客户端 <a href="http://shadowsocks.org/en/download/clients.html" target="_blank" rel="noopener">官网下载页在此</a> <a href="https://dva6.com/downloads/Shadowsocks.zip" target="_blank" rel="noopener">无法翻墙的朋友请下载我提供的备份下载</a></li>
+<li>下载后解压到任意目录（绿色软件免安装，最好再发送个快捷方式到桌面方便打开） 打开shadowsocks.exe</li>
+<li>打开这个页面，使贴子的附件二维码可见于屏幕上，找到系统托盘区的小纸飞机右键单击，在弹出菜单里 点击“扫描屏幕上的二维码”，具体如下图<br><img src="https://dva6.com/usr/uploads/2015/04/4071940896.jpg" alt="bw12.jpg"></li>
+<li>确定后再在系统托盘区的小纸飞机右键单击，在弹出菜单里 点击“启用系统代理”</li>
+</ol>
+<p>____________________2015-04-20更新________________________</p>
+<p><strong>目前在折腾SS多用户管理系统，以上提供的SS帐号暂不可用</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shadowsocks/" rel="tag"># shadowsocks</a>
+          
+            <a href="/tags/bandwagonhost/" rel="tag"># bandwagonhost</a>
+          
+            <a href="/tags/搬瓦工/" rel="tag"># 搬瓦工</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/科学上网/" rel="tag"># 科学上网</a>
+          
+            <a href="/tags/翻墙/" rel="tag"># 翻墙</a>
+          
+            <a href="/tags/傻瓜教程/" rel="tag"># 傻瓜教程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/04/02/start/" rel="next" title="欢迎使用 Typecho">
+                <i class="fa fa-chevron-left"></i> 欢迎使用 Typecho
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/04/02/how-to-buy-bwgvps/" rel="prev" title="BANDWAGONHOST搬瓦工VPS购买教程">
+                BANDWAGONHOST搬瓦工VPS购买教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2015/04/02/use-ss-fq/';
+          this.page.identifier = '2015/04/02/use-ss-fq/';
+          this.page.title = '目前最好的翻墙方式 && shadowsocks翻墙傻瓜教程';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

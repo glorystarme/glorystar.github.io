@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="shadowsocks,教程,ss翻墙,傻瓜教程,翻墙手把手教程,自己搭梯子翻墙," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="做为一个外贸人，真的是离不开google。但国内大环境如此，访问google困难重重。 但是再难，工作也是要展开的！我们之前还可以通过购买商家们的爬墙服务来实现访问google，但这阵严打，这类服务商死掉了一大批，很多朋友也平白遭受了损失！ 以后政策会越来越收紧，能提供此类服务的商家会越来越少，取得合法资质运营此类业务的商家，其费用估计也是天价。 在这种情况下，我推荐大家自行搭梯子翻墙，个人自己搭">
+<meta name="keywords" content="shadowsocks,教程,ss翻墙,傻瓜教程,翻墙手把手教程,自己搭梯子翻墙">
+<meta property="og:type" content="article">
+<meta property="og:title" content="电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/use-bwg-through-the-gfw/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="做为一个外贸人，真的是离不开google。但国内大环境如此，访问google困难重重。 但是再难，工作也是要展开的！我们之前还可以通过购买商家们的爬墙服务来实现访问google，但这阵严打，这类服务商死掉了一大批，很多朋友也平白遭受了损失！ 以后政策会越来越收紧，能提供此类服务的商家会越来越少，取得合法资质运营此类业务的商家，其费用估计也是天价。 在这种情况下，我推荐大家自行搭梯子翻墙，个人自己搭">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/2792248057.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/3868812956.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/1847888081.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/1747458751.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/2381886666.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/3188850783.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/3294554454.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/1222399285.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/147543707.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/3498527012.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/2582920546.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/1650676052.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/1874817572.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/245912448.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/3519233872.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/2885063964.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/1426429880.png">
+<meta property="og:image" content="https://dva6.com/usr/uploads/2017/07/4094391132.png">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.868Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程">
+<meta name="twitter:description" content="做为一个外贸人，真的是离不开google。但国内大环境如此，访问google困难重重。 但是再难，工作也是要展开的！我们之前还可以通过购买商家们的爬墙服务来实现访问google，但这阵严打，这类服务商死掉了一大批，很多朋友也平白遭受了损失！ 以后政策会越来越收紧，能提供此类服务的商家会越来越少，取得合法资质运营此类业务的商家，其费用估计也是天价。 在这种情况下，我推荐大家自行搭梯子翻墙，个人自己搭">
+<meta name="twitter:image" content="https://dva6.com/usr/uploads/2017/07/2792248057.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/27/use-bwg-through-the-gfw/"/>
+
+
+
+
+
+  <title>电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/27/use-bwg-through-the-gfw/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-27T23:32:00+08:00">
+                2017-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/27/use-bwg-through-the-gfw/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/27/use-bwg-through-the-gfw/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>做为一个外贸人，真的是离不开google。但国内大环境如此，访问google困难重重。 但是再难，工作也是要展开的！我们之前还可以通过购买商家们的爬墙服务来实现访问google，但这阵严打，这类服务商死掉了一大批，很多朋友也平白遭受了损失！ 以后政策会越来越收紧，能提供此类服务的商家会越来越少，取得合法资质运营此类业务的商家，其费用估计也是天价。 在这种情况下，我推荐大家自行搭梯子翻墙，个人自己搭建自己使用的梯子，不会成为重点打击对象。 本教程介绍的<strong>并非免费翻墙</strong>,需要购买一台<strong>境外服务器</strong>来作为自己的<strong>专用翻墙服务器</strong>。 <strong>本篇教程全程傻瓜化，无任何技术难度，不需要输入任何命令，不需要记住任何代码。</strong> <strong>分三步走，大概花十分钟就能建立起你自己的专用Shadowsocks服务器，完全不必觉得这会非常困难。</strong> 本篇教程以<a href="https://bwh1.net/aff.php?aff=18212&amp;pid=43" target="_blank" rel="noopener">Bandwagonhost(搬瓦工)的 10G KVM - PROMO VPS</a> (<strong>暂时缺货</strong>)为基础，使用 shadowsocks 为梯子程序。 废话不多说，开始本篇教程。</p>
+<h3 id="1、-购买一台境外服务器用于搭建梯子的服务端"><a href="#1、-购买一台境外服务器用于搭建梯子的服务端" class="headerlink" title="1、 购买一台境外服务器用于搭建梯子的服务端"></a>1、 购买一台境外服务器用于搭建梯子的服务端</h3><h4 id="选择以下套餐VPS购买一台"><a href="#选择以下套餐VPS购买一台" class="headerlink" title="选择以下套餐VPS购买一台"></a>选择以下套餐VPS购买一台</h4><p><a href="https://bwh1.net/aff.php?aff=18212&amp;pid=43" target="_blank" rel="noopener">年付19.99美元KVM架构VPS</a> 1核CPU 512M内存 每月500G流量&lt;-- <strong>暂时缺货</strong> <a href="https://bwh1.net/aff.php?aff=18212&amp;pid=44" target="_blank" rel="noopener">年付49.99美元KVM架构VPS</a> 2核CPU 1024M内存 每月1T流量&lt;– 更高性能，更多流量 <a href="https://bwh1.net/aff.php?aff=18212&amp;pid=53" target="_blank" rel="noopener">年付19.99美元KVM架构VPS</a> 1核CPU 512M内存 每月1T流量 不可换机房&lt;-- <strong>暂时缺货</strong> <a href="https://bwh1.net/aff.php?aff=18212&amp;pid=55" target="_blank" rel="noopener">年付39.99美元KVM架构VPS</a> 2核CPU 1024M内存 每月2T流量 不可换机房&lt;– 新出的套餐 – 2017-08-12 更新 -- 今天搬瓦工新上了一个CN2直连套餐，月付3.99美元/年付29.99美元，前阵喧嚣尘上的搬瓦工要上CN2直连套餐的传闻总算坐实，但根据其放出的测试IP来看，这个只是半程CN2，实际线路改善可能有限。Any way，这个比之所谓的 CHINA DIRECT ROUTE中国直连路由的效果会好上那么一丢丢，但价格也贵了挺多的。 附上新套餐链接，各位按需选择吧 <a href="https://bwh1.net/aff.php?aff=18212&amp;pid=56" target="_blank" rel="noopener">年付29.99美元KVM架构VPS</a> 1核CPU 512M内存 每月500G流量 不可换机房 CN2直连套餐 <strong>这是目前最低价的套餐</strong> -- 更新End – 说明：以上为搬瓦工在售的四个价格最低的套餐。两个流量更多的不可更换机房的套餐搬瓦工说明为CHINA DIRECT ROUTE中国直连路由，但实测意义不大，和普通版QN机房几无差别。其流量更大是个优点，不过普通版如果对所在机房网络表现不满意可以很方便的切换到别的机房，而直连路由就无法切换了。各有优缺点，大家自己取舍。 <img src="https://dva6.com/usr/uploads/2017/07/2792248057.png" alt=""> 为什么要选年付呢？因为年付相比每月付款等于5.5折！搬瓦工也有30天退款保证，觉得不好用再申请退款也可以。 <img src="https://dva6.com/usr/uploads/2017/07/3868812956.png" alt=""> 6个数据中心可选，建议选择Los（洛杉矶），离中国距离最近，开通以后也可以随意切换（直连路由套餐无法切换）。 选完之后 点击最下面的 `Add to Cart` <img src="https://dva6.com/usr/uploads/2017/07/1847888081.png" alt=""> 进入到购物车，可以看到结账明细，下面有优惠码输入框 输入 `BWH1ZBPVK` 6%优惠码 节省一点是一点吧。 <img src="https://dva6.com/usr/uploads/2017/07/1747458751.png" alt=""> 输入之后是这样的 之后点 `checkout` 结账 <img src="https://dva6.com/usr/uploads/2017/07/2381886666.png" alt=""> 新用户会要求填写一些信息注册账户，全部用拼音如实填写即可。<strong>注意地址一定要如实填写</strong>，不用写得那么细，但起码要和你所在城市一样，要不检测到IP地址与填写城市不一致，会被判欺诈，导致购买失败！ <img src="https://dva6.com/usr/uploads/2017/07/3188850783.png" alt=""> 三种支付方式供选择，哪个方便选哪个吧，本次以支付宝为例说明 <img src="https://dva6.com/usr/uploads/2017/07/3294554454.png" alt=""> 点`Complete Order` 后再点 `Pay now` <img src="https://dva6.com/usr/uploads/2017/07/1222399285.png" alt=""> 跳转到支付宝网站 选择扫码或登陆账号完成支付 <img src="https://dva6.com/usr/uploads/2017/07/147543707.png" alt=""> 支付成功 <img src="https://dva6.com/usr/uploads/2017/07/3498527012.png" alt=""> 跳转回搬瓦工 显示订单完成并显示订单号 购买服务器完成</p>
+<h3 id="2、搭建shadowsocks-server端"><a href="#2、搭建shadowsocks-server端" class="headerlink" title="2、搭建shadowsocks server端"></a>2、搭建shadowsocks server端</h3><p>搬瓦工直接在后台集成了shadowsokcs，登陆后台就能一键安装，方便小白用户（它知道你们看见命令行会头痛） <img src="https://dva6.com/usr/uploads/2017/07/2582920546.png" alt="bwg21.png"> 在用户中心 选择 <code>My Services</code> <img src="https://dva6.com/usr/uploads/2017/07/1650676052.png" alt="bwg22.png"> 可以看到你刚才购买的服务器已经激活运行，点击 <code>KiviVM Control Panel</code> 进入VPS管理面板 进入面板后你会看到一些服务器的运行信息，如内存使用量，磁盘使用量，流量使用情况等，可能你会看不懂，没关系，略过这些 我们直接安装shadowsocks server 如下图所示 <img src="https://dva6.com/usr/uploads/2017/07/1874817572.png" alt="bwg23.png"> 安装成功显示如下 <img src="https://dva6.com/usr/uploads/2017/07/245912448.png" alt="bwg24.png"> <code>Go Back</code>后就能看到shadowsocks的连接信息了 如下图所示 <img src="https://dva6.com/usr/uploads/2017/07/3519233872.png" alt="bwg25.png"> <strong>shadowsocks服务端配置完成！</strong></p>
+<p>搬瓦工直接在后台集成了shadowsokcs，登陆后台就能一键安装，方便小白用户（它知道你们看见命令行会头痛） ![bwg21.png][12] 在用户中心 选择 `My Services` ![bwg22.png][13] 可以看到你刚才购买的服务器已经激活运行，点击 `KiviVM Control Panel` 进入VPS管理面板 进入面板后你会看到一些服务器的运行信息，如内存使用量，磁盘使用量，流量使用情况等，可能你会看不懂，没关系，略过这些 我们直接安装shadowsocks server 如下图所示 ![bwg23.png][14] 安装成功显示如下 ![bwg24.png][15] `Go Back`后就能看到shadowsocks的连接信息了 如下图所示 ![bwg25.png][16] **shadowsocks服务端配置完成！**</p>
+<h3 id="3、配置shadowsocks本地客户端"><a href="#3、配置shadowsocks本地客户端" class="headerlink" title="3、配置shadowsocks本地客户端"></a>3、配置shadowsocks本地客户端</h3><p>搬瓦工不愧为Linux小白挚友 直接在后台就给出了客户端配置教程 我也在这里说下</p>
+<h4 id="Android安卓手机用户："><a href="#Android安卓手机用户：" class="headerlink" title="Android安卓手机用户："></a>Android安卓手机用户：</h4><p>访问Play商店下载<a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank" rel="noopener">Shadowsocks-Android</a> 手机里没有play商店？无法翻墙？（废话…) 没关系 <a href="https://dva6.com/downloads/ss_2.10.4.apk" target="_blank" rel="noopener">点击这里下载手动安装</a></p>
+<h4 id="IOS苹果Iphone用户："><a href="#IOS苹果Iphone用户：" class="headerlink" title="IOS苹果Iphone用户："></a>IOS苹果Iphone用户：</h4><p>直接在Appstore里选择以下App之一安装。 <strong>shadowsocks原版</strong> 免费 需要越狱才能使用全功能 要不只是一个支持翻墙的浏览器 <strong>shadowrocket</strong> 售价18元 俗称<strong>小火箭</strong> 支持全局翻墙 无需越狱 推荐 <strong>Wingy</strong> 免费，支持全局翻墙 无需越狱，不过近期有朋友反馈不能用了 近期苹果官方已经把中国区的所有Shadowsocks应用下架了，如果你的Iphone绑定的是中国区的账号，会无法搜索到上述App，可以参考<a href="https://dva6.com/archives/apple-id-conversion-area-without-certification.html" target="_blank" rel="noopener">此篇教程</a>把账号更改成美国区账号，就能搜索到了。</p>
+<h4 id="Mac-OS用户："><a href="#Mac-OS用户：" class="headerlink" title="Mac OS用户："></a>Mac OS用户：</h4><p>Mac OS X GUI Client ShadowsocksX: <a href="https://dva6.com/downloads/ShadowsocksX-2.6.3.dmg" target="_blank" rel="noopener">2.6.3.dmg</a> GoAgentX: <a href="https://dva6.com/downloads/GoAgentX-v2.2.9.dmg" target="_blank" rel="noopener">v2.2.9.dmg</a></p>
+<h4 id="Windows用户："><a href="#Windows用户：" class="headerlink" title="Windows用户："></a>Windows用户：</h4><p>Windows XP和Windows 7 请下载 <a href="https://dva6.com/downloads/shadowsocks-win-2.3.zip" target="_blank" rel="noopener">shadowsocks-win-2.3.zip</a> 需要 <a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=21" target="_blank" rel="noopener">.net framework 3.5</a> 支持 Windows 8及Windows 10 请下载 <a href="https://dva6.com/downloads/shadowsocks-win-dotnet4.0-2.3.zip" target="_blank" rel="noopener">shadowsocks-win-dotnet4.0-2.3.zip</a> 需要 <a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=53344" target="_blank" rel="noopener">.net framework 4.6.2</a> 支持 注意：此工具不是VPN之类全局代理，本质上只是一个Socks5代理，通过修改系统代理实现翻墙，可能会被360卫士或其它电脑安全管家之类的软件静默阻止，造成软件运行出错。运行前请退出某卫士或某管家，或把SS客户端加入其白名单！建议最好不要安装某卫士或管家，安装正统的杀毒软件，如卡巴斯基、NOD32、诺顿、McAfee，这些软件都不会对SS进行阻止！ 这是绿色软件，下载之后解压就能用，打开 <code>shadowsocks.exe</code> 会看到通知栏有一个纸飞机图标 双击它 <img src="https://dva6.com/usr/uploads/2017/07/2885063964.png" alt="bwg26.png"> 填入服务端信息后确定，会自己最小化到通知栏，右键单击-启用系统代理 <img src="https://dva6.com/usr/uploads/2017/07/1426429880.png" alt="bwg27.png"> 好了 你可以打开浏览器看下能不能正常访问google了 <img src="https://dva6.com/usr/uploads/2017/07/4094391132.png" alt="bwg28.png"> 搞定！</p>
+<p>搬瓦工不愧为Linux小白挚友 直接在后台就给出了客户端配置教程 我也在这里说下</p>
+<h4 id="Android安卓手机用户：-1"><a href="#Android安卓手机用户：-1" class="headerlink" title="Android安卓手机用户："></a>Android安卓手机用户：</h4><p>访问Play商店下载<a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank" rel="noopener">Shadowsocks-Android</a> 手机里没有play商店？无法翻墙？（废话…) 没关系 <a href="https://dva6.com/downloads/ss_2.10.4.apk" target="_blank" rel="noopener">点击这里下载手动安装</a> #### IOS苹果Iphone用户： 直接在Appstore里选择以下App之一安装。 **shadowsocks原版** 免费 需要越狱才能使用全功能 要不只是一个支付翻墙的浏览器 **shadowrocket** 售价18元 俗称<strong>小火箭</strong> 支持全局翻墙 无需越狱 推荐 **Wingy** 免费，支持全局翻墙 无需越狱，不过近期有朋友反馈不能用了 近期苹果官方已经把中国区的所有Shadowsocks应用下架了，如果你的Iphone绑定的是中国区的账号，会无法搜索到上述App，可以参考<a href="https://dva6.com/archives/Apple-ID-conversion-area-without-certification.html" target="_blank" rel="noopener">此篇教程</a>把账号更改成美国区账号，就能搜索到了。 #### Mac OS用户： Mac OS X GUI Client ShadowsocksX: [2.6.3.dmg][17] GoAgentX: [v2.2.9.dmg][18] #### Windows用户： Windows XP和Windows 7 请下载 <a href="https://downloads.glorystar.me/shadowsocks-win-2.3.zip" target="_blank" rel="noopener">shadowsocks-win-2.3.zip</a> 需要 <a href="http://www.microsoft.com/zh-CN/download/details.aspx?id=21" target="_blank" rel="noopener">.net framework 3.5</a> 支持 Windows 8及Windows 10 请下载 <a href="https://downloads.glorystar.me/shadowsocks-win-dotnet4.0-2.3.zip" target="_blank" rel="noopener">shadowsocks-win-dotnet4.0-2.3.zip</a> 需要 <a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=53344" target="_blank" rel="noopener">.net framework 4.6.2</a> 支持 注意：此工具不是VPN之类全局代理，本质上只是一个Socks5代理，通过修改系统代理实现翻墙，可能会被360卫士或其它电脑安全管家之类的软件静默阻止，造成软件运行出错。运行前请退出某卫士或某管家，或把SS客户端加入其白名单！建议最好不要安装某卫士或管家，安装正统的杀毒软件，如卡巴斯基、NOD32、诺顿、McAfee，这些软件都不会对SS进行阻止！ 这是绿色软件，下载之后解压就能用，打开 `shadowsocks.exe` 会看到通知栏有一个纸飞机图标 双击它 ![bwg26.png][19] 填入服务端信息后确定，会自己最小化到通知栏，右键单击-启用系统代理 ![bwg27.png][20] 好了 你可以打开浏览器看下能不能正常访问google了 ![bwg28.png][21] 搞定！</p>
+<p>提醒：网上有一些人在售卖或者免费提供SS帐号，我想说的是，你永远不知道电脑那一端的那个陌生人在想些什么，想干什么！使用别人提供的SS帐号是有安全隐患的，因为他知道你的加密方式，并且服务端掌握在他手里，他是可以对你的网络通信进行监听的，我们做外贸的，有时信息泄露的后果挺严重的，望大家慎重。</p>
+<h3 id="安全提醒："><a href="#安全提醒：" class="headerlink" title="安全提醒："></a>安全提醒：</h3><p>Shadowsocks只是一个帮你穿越长城防火墙的小工具，它无法帮你保持匿名！在使用时务必遵守中国（人在中国）和服务器所在地（服务器在美国）的法律！墙外言论纷杂，接收信息时务必保持自己的理性思辨！ 后续更新 <a href="https://dva6.com/archives/speed-up-shadowsocks.html" target="_blank" rel="noopener">感觉速度很慢？使用BBR优化服务器加速小飞机！</a> <a href="https://dva6.com/archives/chrome-use-switchyomega-autoproxy.html" target="_blank" rel="noopener">Chrome+SwitchyOmega+Shadowsocks实现智能翻墙</a> <a href="https://dva6.com/archives/shadowsocks-with-proxifier-global-over-the-gfw.html" target="_blank" rel="noopener">Shadowsocks配合Proxifier实现全局翻墙</a> <a href="https://dva6.com/archives/how-to-make-a-autoproxy-router.html" target="_blank" rel="noopener">在路由器上配置SS！手把手打造自己的外贸路由器、智能翻墙路由器</a> 不差钱！不想用美国的服务器，只要速度快！没问题！阿里云HK、LinodeJP等高富帅服务器欢迎你 　　待更新</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shadowsocks/" rel="tag"># shadowsocks</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/ss翻墙/" rel="tag"># ss翻墙</a>
+          
+            <a href="/tags/傻瓜教程/" rel="tag"># 傻瓜教程</a>
+          
+            <a href="/tags/翻墙手把手教程/" rel="tag"># 翻墙手把手教程</a>
+          
+            <a href="/tags/自己搭梯子翻墙/" rel="tag"># 自己搭梯子翻墙</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/27/how-to-login-two-skype-accounts-at-the-same-time/" rel="next" title="怎么才能在一台电脑上同时打开两个skype呢？">
+                <i class="fa fa-chevron-left"></i> 怎么才能在一台电脑上同时打开两个skype呢？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/30/speed-up-shadowsocks/" rel="prev" title="感觉速度很慢？使用BBR优化服务器加速小飞机！">
+                感觉速度很慢？使用BBR优化服务器加速小飞机！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、-购买一台境外服务器用于搭建梯子的服务端"><span class="nav-number">1.</span> <span class="nav-text">1、 购买一台境外服务器用于搭建梯子的服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选择以下套餐VPS购买一台"><span class="nav-number">1.1.</span> <span class="nav-text">选择以下套餐VPS购买一台</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、搭建shadowsocks-server端"><span class="nav-number">2.</span> <span class="nav-text">2、搭建shadowsocks server端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、配置shadowsocks本地客户端"><span class="nav-number">3.</span> <span class="nav-text">3、配置shadowsocks本地客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Android安卓手机用户："><span class="nav-number">3.1.</span> <span class="nav-text">Android安卓手机用户：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IOS苹果Iphone用户："><span class="nav-number">3.2.</span> <span class="nav-text">IOS苹果Iphone用户：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-OS用户："><span class="nav-number">3.3.</span> <span class="nav-text">Mac OS用户：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows用户："><span class="nav-number">3.4.</span> <span class="nav-text">Windows用户：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Android安卓手机用户：-1"><span class="nav-number">3.5.</span> <span class="nav-text">Android安卓手机用户：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全提醒："><span class="nav-number">4.</span> <span class="nav-text">安全提醒：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/07/27/use-bwg-through-the-gfw/';
+          this.page.identifier = '2017/07/27/use-bwg-through-the-gfw/';
+          this.page.title = '电脑小白使用Shadowsocks搭建翻墙服务器傻瓜式手把手教程';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

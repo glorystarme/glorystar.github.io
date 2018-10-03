@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh_cb">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="netgear,qos,原生固件qos,网件," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="苦逼的博主家里的网络还是电信6M（0.5M上行），平常使用还好；但是周末时哥嫂回到家里网络就真的是炸了，近十台手机，起码得有两个人同时用手机看在线视频，老妈还要看电视–乐视网络视频，那时电脑真的是看个网站都不顺畅，卡半天才能刷出来。 农村地区，还没光纤覆盖；打电话给电信说要升级宽带，被告知6M已达到这条线路的最大宽带，没有资源再供提速了。 因为这种情况，路由器qos成了刚需，前阵一直在折腾这个，下">
+<meta name="keywords" content="netgear,qos,原生固件qos,网件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Netgear网件官方固件的qos还挺好用的">
+<meta property="og:url" content="http://yoursite.com/2016/12/24/netgear-stock-rom-qos-is-powerful/index.html">
+<meta property="og:site_name" content="荣耀之星">
+<meta property="og:description" content="苦逼的博主家里的网络还是电信6M（0.5M上行），平常使用还好；但是周末时哥嫂回到家里网络就真的是炸了，近十台手机，起码得有两个人同时用手机看在线视频，老妈还要看电视–乐视网络视频，那时电脑真的是看个网站都不顺畅，卡半天才能刷出来。 农村地区，还没光纤覆盖；打电话给电信说要升级宽带，被告知6M已达到这条线路的最大宽带，没有资源再供提速了。 因为这种情况，路由器qos成了刚需，前阵一直在折腾这个，下">
+<meta property="og:locale" content="zh_cb">
+<meta property="og:updated_time" content="2018-10-03T04:37:31.868Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Netgear网件官方固件的qos还挺好用的">
+<meta name="twitter:description" content="苦逼的博主家里的网络还是电信6M（0.5M上行），平常使用还好；但是周末时哥嫂回到家里网络就真的是炸了，近十台手机，起码得有两个人同时用手机看在线视频，老妈还要看电视–乐视网络视频，那时电脑真的是看个网站都不顺畅，卡半天才能刷出来。 农村地区，还没光纤覆盖；打电话给电信说要升级宽带，被告知6M已达到这条线路的最大宽带，没有资源再供提速了。 因为这种情况，路由器qos成了刚需，前阵一直在折腾这个，下">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/24/netgear-stock-rom-qos-is-powerful/"/>
+
+
+
+
+
+  <title>Netgear网件官方固件的qos还挺好用的 | 荣耀之星</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_cb">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">荣耀之星</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">世界在我心中</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/24/netgear-stock-rom-qos-is-powerful/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Glorystar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荣耀之星">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Netgear网件官方固件的qos还挺好用的</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-24T23:09:00+08:00">
+                2016-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/默认分类/" itemprop="url" rel="index">
+                    <span itemprop="name">默认分类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/24/netgear-stock-rom-qos-is-powerful/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/12/24/netgear-stock-rom-qos-is-powerful/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>苦逼的博主家里的网络还是电信6M（0.5M上行），平常使用还好；但是周末时哥嫂回到家里网络就真的是炸了，近十台手机，起码得有两个人同时用手机看在线视频，老妈还要看电视–乐视网络视频，那时电脑真的是看个网站都不顺畅，卡半天才能刷出来。</p>
+<p>农村地区，还没光纤覆盖；打电话给电信说要升级宽带，被告知6M已达到这条线路的最大宽带，没有资源再供提速了。</p>
+<p>因为这种情况，路由器qos成了刚需，前阵一直在折腾这个，下面把折腾的过程说下。</p>
+<p>最先家里网络主路由是一个TP-LINK的猫路由一体机，下面再接一个NETGEAR WNR-3500Lv1提供有线千兆网络，因为这个路由的无线信号不强，又另接了个newifi mini专做ap。</p>
+<p>首先开刀的是WNR-3500Lv1，原来刷了openwrt在用，因为听说tomato的qos比较强，就刷了一系列的tomato固件：tomato dualwan、Tomato by Shibby，一番使用下来，发现开启了qos也没有什么效果，完全无法限制住迅雷，虽然迅雷下载速度能被限制到100kb/s，但网络还是很卡，而网络总使用率不到400kb/s，但迅雷开启了近2000个并发连接，以为是主路由的锅，他的性能无法承受这个连接数。于是设置不使用tp-link的路由功能，把它当作一个纯粹的宽带猫来使用，使用桥接由wnr3500lv1进行拨号上网。但这样设置了，问题依旧。好吧，估计是电信作了连接数限制吧。</p>
+<p>之后还设置过在tomato上命令配置限制连接数，但效果也不明显。</p>
+<p>之后在齐齐奔跑—Alex看到了这个qos限速脚本</p>
+<pre><code>#bbs.dualwan.cn 2015-8-14 by cheng1196  qq372693586
+#这是OPENWRT固件与Tomato固件通用智能限速脚本
+#装载核心模块
+
+insmod cls_u32
+insmod em_u32
+insmod act_connmark
+insmod act_mirred
+insmod sch_ingress
+insmod cls_fw
+insmod sch_htb
+insmod sch_sfq
+insmod sch_red
+
+#设置局域网处于192.168.1.0的网段
+UIP=&quot;192.168.1.&quot;
+NET=&quot;192.168.1.0/24&quot;
+
+#设置限速的ip地址192.168.1.100到192.168.1.130
+#DHCP分配也需要设置192.168.1.100到192.168.1.130 
+IPS=&quot;100&quot;
+IPE=&quot;130&quot; 
+
+#设置宽带的最大上传下载速度，UP上传，DOWN下载,1兆等于128，这是20兆光纤上传与下载
+UP=384
+DOWN=2560
+
+#装载核心模块,创建QOS专用链
+insmod imq
+ifconfig imq1 up
+ifconfig imq0 up
+
+
+iptables -t mangle -N QOSUP
+iptables -t mangle -N QOSDOWN
+iptables -t mangle -A FORWARD -s $NET -d ! $NET -p ! icmp -j QOSUP
+iptables -t mangle -A FORWARD -d $NET -s ! $NET -p ! icmp -j QOSDOWN
+iptables -t mangle -A QOSUP -j IMQ --todev 1
+iptables -t mangle -A QOSDOWN -j IMQ --todev 0
+
+iptables -t mangle -A QOSUP -p udp --dport 53 -j RETURN
+iptables -t mangle -A QOSUP -m length --length :512 -j RETURN
+iptables -t mangle -A QOSDOWN -p udp --sport 53 -j RETURN
+iptables -t mangle -A QOSDOWN -m length --length :512 -j RETURN
+
+tc qdisc del dev imq0 root
+tc qdisc del dev imq1 root
+tc qdisc add dev imq0 root handle 1: htb
+tc qdisc add dev imq1 root handle 1: htb
+tc class add dev imq0 parent 1: classid 1:1 htb rate $((DOWN))kbps
+tc class add dev imq1 parent 1: classid 1:1 htb rate $((UP))kbps
+
+i=$IPS; 
+while [ $i -le $IPE ] 
+do
+
+tc class add dev imq1 parent 1:1 classid 1:$i htb rate $((UP/32))kbps ceil $((UP/16*4))kbps quantum 1500 prio 5
+tc qdisc add dev imq1 parent 1:$i handle $i: sfq limit 64 perturb 10
+tc filter add dev imq1 parent 1: protocol ip prio 100 handle $i fw classid 1:$i
+
+tc class add dev imq0 parent 1:1 classid 1:$i htb rate $((DOWN/32))kbps ceil $((DOWN/16*14))kbps quantum 3001 mtu 3200 prio 5
+tc qdisc add dev imq0 parent 1:$i handle $i: sfq perturb 10
+tc filter add dev imq0 parent 1: protocol ip prio 100 handle $i fw classid 1:$i
+
+iptables -t mangle -A QOSUP -s $UIP$i -j MARK --set-mark $i
+iptables -t mangle -A QOSDOWN -d $UIP$i -j MARK --set-mark $i
+
+i=`expr $i + 1` 
+done
+</code></pre><p>有一定效果，比tomato自带的qos效果更好一点，之前迅雷下载会导致整个网络几乎处于不可用状态，用这个还行，起码网页还刷得出来，视频能播放，不过放十几秒缓冲个几秒也是蛋痛得紧。</p>
+<p>说到底还是网络的速度实在是太慢了，只有0.5M上传，在路由后台可以看到迅雷在下载时几乎占满了上传，导致整个网络拥堵。qos有一定效果但它毕竟也不是万能的。</p>
+<p>最后突然想起来，网件的原生固件也有带qos的，何不试试它的qos怎么样呢？说真的，这个WNR3500Lv1路由器几乎买来就是折腾的，几乎没有正经用过网件的原生固件。</p>
+<p>网件的qos最终带来的惊喜，其qos默认配置不用改，开启它就好，真的挺强的，实测能限制住迅雷，网络繁忙时其下载速度会自动降下来，其也会自动限制住迅雷多开连接，在tomato下，迅雷能开启近2000个并发连接，在原生qos下，只能开启300多个。</p>
+<p>最终在这个qos下，我用6M宽带做到了两台手机看超清网络视频，我在一台电脑看斗鱼超清直播，另一台电脑开迅雷下载。而视频全部不卡，迅雷下载被限制在150kb/s左右。</p>
+<p>如果你也有和我一样的困扰，并且你手里也有网件的路由器的话，不妨试下网件原生固件（界面看起来真的好挫）的qos功能，没准它能给你惊喜呢~</p>
+<p>最后，祝各位圣诞快乐哦~</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/netgear/" rel="tag"># netgear</a>
+          
+            <a href="/tags/qos/" rel="tag"># qos</a>
+          
+            <a href="/tags/原生固件qos/" rel="tag"># 原生固件qos</a>
+          
+            <a href="/tags/网件/" rel="tag"># 网件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/15/netgear-router-lost-mac-change-it-back/" rel="next" title="网件netgear系列路由丢失MAC地址改回原厂设定的办法">
+                <i class="fa fa-chevron-left"></i> 网件netgear系列路由丢失MAC地址改回原厂设定的办法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/29/install-vnstat-in-share-server/" rel="prev" title="给用作公共服务器的vps安装vnstat流量监控">
+                给用作公共服务器的vps安装vnstat流量监控 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Glorystar" />
+          <p class="site-author-name" itemprop="name">Glorystar</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">244</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glorystar</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://glorystarme.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2016/12/24/netgear-stock-rom-qos-is-powerful/';
+          this.page.identifier = '2016/12/24/netgear-stock-rom-qos-is-powerful/';
+          this.page.title = 'Netgear网件官方固件的qos还挺好用的';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://glorystarme.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
